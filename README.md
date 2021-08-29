@@ -3,7 +3,7 @@
 This will create soft links in home directory for every hidden config file:  
 `ln -sf  (pwd)/.* ~/`   
 `ln -sf  (pwd)/i3/* ~/.config/i3/`
-
+`mkdir -p -v ~/.config/nvim; ln -sf (pwd)/init.vim ~/.config/nvim/init.vim`
 ##### TMUX
 
 Just copy-paste the content of .tmux.conf to your ~/.tmux.conf file or `ln -s {{path/to/file}} {{path/to/symlink}}`.
