@@ -13,5 +13,9 @@ Plug 'tpope/vim-sensible'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" potentially install https://github.com/neoclide/coc.nvim
+" so nvim have language completion and language server attached
+" https://octetz.com/docs/2019/2019-04-24-vim-as-a-go-ide/
+
 " Initialize plugin system
 call plug#end()
