@@ -1,16 +1,4 @@
-### My dotfiles
-
-This will create soft links in home directory for every hidden config file:  
-`ln -sf  (pwd)/.* ~/`   
-`ln -sf  (pwd)/i3/* ~/.config/i3/`
-`mkdir -p -v ~/.config/nvim; ln -sf (pwd)/init.vim ~/.config/nvim/init.vim`
-
 ##### TMUX
-
-Just copy-paste the content of .tmux.conf to your ~/.tmux.conf file or `ln -s {{path/to/file}} {{path/to/symlink}}`.
-
-SHIFT + arrow to switch pages
-
 The original file I stole from https://gist.github.com/spicycode/1229612.
 
 Additional info:
@@ -42,16 +30,9 @@ Run alsamixer, then:
 
 ##### nvim config
 
-install plug with
-```
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-```
-
-Make sure you have symlink in place and run plugin install in nvim.
-
 TODO in vim:
-- a list of open files and easy switch between them
-- file browsing and navigation
-- go to definition
-- search for matches and possible preview
+- [] a list of open files and easy switch between them (possibly a quickfix list and local fix list)
+- [] file browsing and navigation ( possible also with telescope )
+- [] go to definition 
+- [x] search for matches and possible preview (telescope plugin)
+- [] git gutter
