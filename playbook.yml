@@ -29,6 +29,7 @@
           - neovim
           - i3
           - rofi
+          - make
 
     - name: "Pull .dotfiles from GitHub"
       become_user: slash3b
