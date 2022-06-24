@@ -36,3 +36,9 @@ TODO in vim:
 - [] go to definition 
 - [x] search for matches and possible preview (telescope plugin)
 - [] git gutter
+
+
+#### Establish new local dev environment with ansible playbook
+
+`sudo ansible-playbook playbook.yml`
+
