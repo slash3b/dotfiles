@@ -5,6 +5,8 @@
     tasks:
 
     - name: Create home folders
+      become_user: slash3b
+      become: true
       file:
         path: "{{ item }}"
         state: directory
