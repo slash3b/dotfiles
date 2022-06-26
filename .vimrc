@@ -30,9 +30,6 @@ let mapleader=","
 " hit F2 in insert mode to paste corretly data
 set pastetoggle=<F2>
 
-" turn off all the colors
-syntax off
-
 " from mastering vim book
 packloadall " load all plugins 
 silent! helptags ALL " load help files for all plugins
@@ -40,14 +37,6 @@ silent! helptags ALL " load help files for all plugins
 set foldmethod=indent
 " always display a status line
 set laststatus=2
-
-if has('nvim')
-    nnoremap <leader>ff <cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>
-    nnoremap <leader>fo <cmd>Telescope file_browser<cr>
-    nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-    nnoremap <leader>fb <cmd>Telescope buffers<cr>
-    nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-endif
 
 " install:
 "
@@ -61,3 +50,10 @@ nmap <F6> :NERDTreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>p :CtrlP<cr>
 
+" FZF 
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>b :Buffers<cr>
+nnoremap <leader>r :Rg<cr>
+
+" turn off all the colors
+syntax off
