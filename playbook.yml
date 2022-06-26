@@ -30,6 +30,8 @@
           - i3
           - rofi
           - make
+          - ripgrep
+          - silversearcher-ag
 
     - name: "Pull .dotfiles from GitHub"
       become_user: slash3b

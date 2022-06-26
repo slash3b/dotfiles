@@ -12,22 +12,21 @@ source ~/.vimrc
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'tpope/vim-sensible'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 Plug 'vim-unimpaired'
 Plug 'vim-repeat'
 Plug 'vim-easymotion'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
 
-" All thing telescope related
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" FZF 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
+" Misc
 Plug 'kyazdani42/nvim-web-devicons'
 
 " this is for autocomplete -- oppose to coc.nvim
@@ -39,24 +38,3 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 " Initialize plugin system
 call plug#end()
-
-
-"
-" Telescope and its plugins set up
-"
-lua <<EOF
-
-local actions = require('telescope.actions')
-
-require('telescope').setup{
-    defaults = {
-        prompt_prefix = ">> ",
-        mappings = {
-            i = {
-                ["<esc>"] = actions.close
-            }
-        }
-    }
-}
-require('telescope').load_extension('fzf')
-EOF
