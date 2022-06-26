@@ -50,12 +50,6 @@ if has('nvim')
 endif
 
 " install:
-" vim-unimpaired
-" vim-repeat
-" vim-easymotion
-" airblade/vim-gitgutter
-" ctrl-p
-" commentary vim
 "
 
 " this is for yaml to be nice

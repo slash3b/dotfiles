@@ -12,10 +12,16 @@ source ~/.vimrc
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.config/nvim/plugged')
 
-"Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'vim-unimpaired'
+Plug 'vim-repeat'
+Plug 'vim-easymotion'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
 
 " All thing telescope related
 Plug 'nvim-lua/plenary.nvim'
