@@ -32,6 +32,9 @@
           - make
           - ripgrep
           - silversearcher-ag
+          - gcc
+          - pkg-config
+      tags: soft
 
     - name: "Pull .dotfiles from GitHub"
       become_user: slash3b
