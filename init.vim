@@ -14,16 +14,19 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-
+" Note 1:
 " some plugins throw out 'deprecated' message
 " a way to suppress it is to prepend plugin with `vim-scripts/`
 " https://github.com/junegunn/vim-plug/issues/645
-Plug 'vim-scripts/vim-unimpaired'
-Plug 'vim-scripts/vim-repeat'
-Plug 'vim-scripts/vim-easymotion'
+" Note 2:
+" so, apparently, before installing plugins you have to
+" source current file and then run install
+" a.) `source %` and then `:PlugInstall` 
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-repeat'
 
 " FZF 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
