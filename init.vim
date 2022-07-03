@@ -34,6 +34,7 @@ Plug 'junegunn/fzf.vim'
 
 " Misc
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp

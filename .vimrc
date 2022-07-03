@@ -18,42 +18,30 @@ set smartindent         " smart indent : )
 set noerrorbells        " no bells and whistles  
 
 set number              " line numbers on 
-set relativenumber      " use relative numbers
 set nowrap              " no wrapping 
 set incsearch           " incremental search is on
-set ruler               " ruler that shows your position in the file
 
 " set map leader
 let mapleader=","
 
-
 " hit F2 in insert mode to paste corretly data
 set pastetoggle=<F2>
-
-" from mastering vim book
-packloadall " load all plugins 
-silent! helptags ALL " load help files for all plugins
 
 set foldmethod=indent
 " always display a status line
 set laststatus=2
 
-" install:
-"
-
 " this is for yaml to be nice
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
-nmap <F6> :NERDTreeToggle<CR>
-
-nnoremap <leader>n :NERDTreeToggle<cr>
-nnoremap <leader>p :CtrlP<cr>
+" CHAD file tree viewver
+nnoremap <leader>n <cmd>CHADopen<cr>
 
 " FZF 
-nnoremap <leader>f :Files<cr>
-nnoremap <leader>b :Buffers<cr>
-nnoremap <leader>r :Rg<cr>
+nnoremap <leader>f <cmd>Files<cr>
+nnoremap <leader>b <cmd>Buffers<cr>
+nnoremap <leader>r <cmd>Rg<cr>
 
 " turn off all the colors
 syntax off
