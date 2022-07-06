@@ -3,7 +3,6 @@
 
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
-source ~/.vimrc
 
 " https://github.com/junegunn/vim-plug
 "
@@ -33,8 +32,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Misc
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp
@@ -45,3 +43,5 @@ Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 " Initialize plugin system
 call plug#end()
+
+source ~/.vimrc

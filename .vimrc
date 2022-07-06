@@ -5,9 +5,10 @@ set autoread
 " Set 5 lines to the cursor - when moving vertically using j/k
 set so=5
 
-" --------------------------------------------------------------------------------
-" configure editor with tabs and nice stuff...
-" --------------------------------------------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""""""
+" => configure editor with tabs and nice stuff
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 set expandtab           " enter spaces when tab is pressed
 set textwidth=120       " break lines when line length increases
 set tabstop=4           " use 2 character space to represent tab
@@ -31,17 +32,40 @@ set foldmethod=indent
 " always display a status line
 set laststatus=2
 
-" this is for yaml to be nice
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
-" CHAD file tree viewver
-nnoremap <leader>n <cmd>CHADopen<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin Related Configs
+"""""""""""""""""""""""""""""""""""""""""""""""
 
-" FZF 
+" NERD tree 
+nnoremap <leader>n <cmd>NERDTreeToggle<cr>
+" show hidden files by default
+let NERDTreeShowHidden=1
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=1
+
+" FZF
 nnoremap <leader>f <cmd>Files<cr>
 nnoremap <leader>b <cmd>Buffers<cr>
 nnoremap <leader>r <cmd>Rg<cr>
 
-" turn off all the colors
-syntax off
+"""""""""""""""""""""""""""""""""""""""""""""""
+" => Visuals
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" 256 colors
+set t_Co=256
+
+" toggle invisible characters
+set invlist
+set list
+set listchars=tab:¦\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" => References
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" https://github.com/lucasfcosta/dotfiles/blob/master/.config/nvim/init.vim#L85
+
