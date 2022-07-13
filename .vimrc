@@ -10,7 +10,7 @@ set so=5
 """""""""""""""""""""""""""""""""""""""""""""""
 
 set expandtab           " enter spaces when tab is pressed
-set textwidth=120       " break lines when line length increases
+" set textwidth=120       " break lines when line length increases
 set tabstop=4           " use 2 character space to represent tab
 set softtabstop=4       " tab is 2 spaces long 
 set shiftwidth=4        " number of spaces to use for auto indent
@@ -28,7 +28,11 @@ let mapleader=","
 " hit F2 in insert mode to paste corretly data
 set pastetoggle=<F2>
 
+" fold enabled using indent
 set foldmethod=indent
+" do not fold by default
+set foldlevel=99
+
 " always display a status line
 set laststatus=2
 
@@ -44,6 +48,11 @@ let NERDTreeShowHidden=1
 
 " close NERDTree after a file is opened
 let g:NERDTreeQuitOnOpen=1
+" automatically delete buffer if file was deleted
+let NERDTreeAutoDeleteBuffer = 1
+" a bit prettier tree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " FZF
 nnoremap <leader>f <cmd>Files<cr>
@@ -61,6 +70,9 @@ set t_Co=256
 set invlist
 set list
 set listchars=tab:¦\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+
+" colorize what exceeds 120 char line
+set colorcolumn=120
 
 
 """""""""""""""""""""""""""""""""""""""""""""""
