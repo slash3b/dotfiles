@@ -1,0 +1,10 @@
+[user]
+	name = Ilya Tribusean
+	email = slash3b@gmail.com
+    signingkey = A13AE6BBAF0DADF2
+
+[gpg]
+    program = gpg
+
+[commit]
+    gpgsign = true

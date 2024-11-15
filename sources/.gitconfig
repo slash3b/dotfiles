@@ -1,0 +1,20 @@
+[user]
+	name = Ilya Tribusean
+	email = slash3b@gmail.com
+
+[core]
+	excludesfile = ~/.gitignore
+	filemode = false
+	editor = nvim
+
+[rerere]
+    enabled = 1
+
+[pull]
+    rebase = true
+
+[init]
+	defaultBranch = main
+
+[includeIf "gitdir:~/Projects/work/"]
+    path = .gitconfig.work
