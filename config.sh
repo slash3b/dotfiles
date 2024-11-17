@@ -2,6 +2,12 @@
 
 set -euo pipefail
 
+mkdir -p /home/slash3b/Documents/screenshots
+chown slash3b:slash3b /home/slash3b/Documents/screenshots
+
+mkdir -p /home/slash3b/Projects
+chown slash3b:slash3b /home/slash3b/Projects
+
 # Check if the current user is root
 if [[ $EUID -ne 0 ]]; then
     echo "You must be root to run this script." 1>&2
@@ -76,7 +82,7 @@ chown slash3b:slash3b /home/slash3b/.config/fish/config.fish
 chattr +i -f /home/slash3b/.config/fish/config.fish
 
 # https://github.com/ivakyb/fish_ssh_agent
-wget https://gitlab.com/kyb/fish_ssh_agent/raw/master/functions/fish_ssh_agent.fish -P ~/.config/fish/functions/
+wget https://gitlab.com/kyb/fish_ssh_agent/raw/master/functions/fish_ssh_agent.fish -P /home/slash3b/.config/fish/functions/
 
 echo "fish conf has been updated"
 
@@ -151,5 +157,20 @@ chattr +i /home/slash3b/.gitignore
 
 echo ".gitconfig was installed"
 
+if [ ! -e /home/slash3b/.config/redshift/redshift.conf ]; then
+    mkdir -p /home/slash3b/.config/redshift
+    # .config/redshift/redshift.conf
+    cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift/redshift.conf
+fi
+
+chattr -i /home/slash3b/.config/redshift/redshift.conf
+
+cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift/redshift.conf
+
+chown -R slash3b:slash3b /home/slash3b/.config/redshift
+
+chattr +i /home/slash3b/.config/redshift/redshift.conf
+
+echo ".redshift was installed"
 
 exit 0

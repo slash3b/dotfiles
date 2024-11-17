@@ -2,7 +2,34 @@
 
 set -euo pipefail
 
+# todo: https://www.linuxfordevices.com/tutorials/ubuntu/syncthing-install-and-setup
+apt install -y syncthing syncthing-gtk
+
 apt install -y picom
+
+apt install -y blueman
+
+# install pipewire
+sudo apt update -y
+
+sudo apt install pipewire-audio wireplumber pipewire-pulse pipewire-alsa libspa-0.2-bluetooth
+# should be run as user?
+echo "wireplumber systemctl"
+# fix this
+# systemctl --user --now enable wireplumber.service
+
+
+# redshift
+sudo apt -y install redshift-gtk
+
+	# 1. move folders and configs WIP
+	# 2. solve wifi issue
+
+	# add to i3 startup
+	# caffeine-indicator
+	# nm-applet
+
+
 
 # todo: wrap this up in a function "rebuild"
 apt install -y \
@@ -58,6 +85,10 @@ sudo apt update -y
 sudo apt install pipewire-audio wireplumber pipewire-pulse pipewire-alsa libspa-0.2-bluetooth
 # should be run as user?
 systemctl --user --now enable wireplumber.service
+
+
+# redshift
+sudo apt -y install redshift-gtk
 
 
 
