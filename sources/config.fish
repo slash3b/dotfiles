@@ -15,6 +15,10 @@ set -x MANPAGER "less -S"
 
 set -x PAGER "less -S"
 
+###
+# this works once, let it be like this for now.
+set -x -U GOPATH $HOME/go-pkgs
+
 # review this
 # https://unix.stackexchange.com/questions/267885/how-do-i-scale-i3-window-manager-for-my-hidpi-display
 set -x GDK_SCALE 2
