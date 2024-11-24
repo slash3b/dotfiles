@@ -154,6 +154,9 @@ sudo apt -y install redshift-gtk
 
 sudo apt autoremove -y
 
+# monitor brightness
+sudo apt install light
+
 
 
 

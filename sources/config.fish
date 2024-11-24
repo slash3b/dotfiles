@@ -75,7 +75,7 @@ function goget
     set -l dlfile "/home/slash3b/Downloads/$argv.linux-amd64.tar.gz"
 
     if test ! -e $dlfile
-        set_color green; echo "downloading https://go.dev/dl/$argv.linux-amd64.tar.gz"; set_color normal
+        set_color green; echo "\n\ndownloading https://go.dev/dl/go$argv.linux-amd64.tar.gz\n\n"; set_color normal
 
         wget --output-document "/home/slash3b/Downloads/$argv.linux-amd64.tar.gz" "https://go.dev/dl/$argv.linux-amd64.tar.gz"
 

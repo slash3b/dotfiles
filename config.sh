@@ -114,10 +114,11 @@ chattr +i /home/slash3b/.config/autorandr/mobile/setup
 
 echo "autorandr conf was installed"
 
-chattr -i /home/slash3b/.Xresources
-cp -f /home/slash3b/dotfiles/sources/.Xresources /home/slash3b/.Xresources
-chown slash3b:slash3b /home/slash3b/.Xresources
-chattr +i /home/slash3b/.Xresources
+
+#chattr -i /home/slash3b/.Xresources
+#cp -f /home/slash3b/dotfiles/sources/.Xresources /home/slash3b/.Xresources
+#chown slash3b:slash3b /home/slash3b/.Xresources
+#chattr +i /home/slash3b/.Xresources
 
 echo ".Xresources was installed"
 
