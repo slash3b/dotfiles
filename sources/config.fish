@@ -15,10 +15,6 @@ set -x MANPAGER "less -S"
 
 set -x PAGER "less -S"
 
-###
-# this works once, let it be like this for now.
-set -x -U GOPATH $HOME/go-pkgs
-
 # review this
 # https://unix.stackexchange.com/questions/267885/how-do-i-scale-i3-window-manager-for-my-hidpi-display
 set -x GDK_SCALE 2
@@ -43,9 +39,18 @@ alias pbpaste='xclip -selection clipboard -o'
 # vim and emacs
 alias vim='nvim'
 
-# GO (or any other lang)
-# set -x GOBIN "$HOME/go/bin"
+# golang ENVs
+go env -w GOPATH=/home/slash3b/go-pkgs
+
+# you need to set this up if using private repositories,
+# otherwise go get will hit public services only attempting to fetch package info
+# https://sum.golang.org/lookup/github.com/private_org/repo_name@v1.5.0
+# go env -w GOPRIVATE=github.com/org_name
+
+# note: good way to set machine specific config in /home/slash3b/.config/fish/conf.d/config.fish
+
 set -Ua fish_user_paths "$HOME/go/bin"
+set -Ua fish_user_paths "$HOME/go-pkgs/bin"
 
 # direnv 
 # trigger direnv at prompt, and on every arrow-based directory change (default)

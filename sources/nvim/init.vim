@@ -48,6 +48,9 @@ Plug 'junegunn/fzf.vim'
 " Misc
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
+" Hightlight yanked text
+Plug 'machakann/vim-highlightedyank'
+
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp
 
@@ -57,7 +60,6 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Initialize plugin system
 call plug#end()
-
 
 " has to be in the end, to be able to pick up all the plugins above
 source ~/.vimrc
