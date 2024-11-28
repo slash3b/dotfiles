@@ -11,9 +11,10 @@ set EDITOR "nvim"                 		  # $EDITOR use Emacs in terminal
 #set -x MANPAGER "nvim +Man!"
 
 ### "less" as manpager
-set -x MANPAGER "less -S"
+### less with no wrap lines and with colors.
+set -x MANPAGER "less -S -R"
 
-set -x PAGER "less -S"
+set -x PAGER "less -S -R"
 
 # review this
 # https://unix.stackexchange.com/questions/267885/how-do-i-scale-i3-window-manager-for-my-hidpi-display
