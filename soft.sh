@@ -157,6 +157,17 @@ sudo apt autoremove -y
 # monitor brightness
 sudo apt install light
 
+# needed to run game of life with ebitenengine
+# go run github.com/hajimehoshi/ebiten/v2/examples/life@latest
+sudo apt install libx11-dev
+sudo apt-get install libxcomposite-dev
+sudo apt-get install libxrandr-dev
+sudo apt install mesa-common-dev
+sudo apt install libxcursor-dev
+sudo apt-get install libxinerama-dev
+sudo apt install libxi-dev
+sudo apt install libxxf86vm-dev
+
 
 
 
