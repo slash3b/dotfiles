@@ -19,6 +19,7 @@ set smartindent         " smart indent : )
 set noerrorbells        " no bells and whistles  
 
 set number              " line numbers on 
+set relativenumber
 set nowrap              " no wrapping 
 set incsearch           " incremental search is on
 
