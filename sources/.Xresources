@@ -1,2 +1,5 @@
 Xft.dpi: 144
 # 192 is also a good one
+
+
+xscreensaver.lock: false
