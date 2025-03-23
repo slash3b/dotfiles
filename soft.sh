@@ -168,8 +168,6 @@ sudo apt-get install libxinerama-dev
 sudo apt install libxi-dev
 sudo apt install libxxf86vm-dev
 
-
-
-
-
+# screensaver
+sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl-extra
 
