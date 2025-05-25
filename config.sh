@@ -158,19 +158,19 @@ chattr +i /home/slash3b/.gitignore
 
 echo ".gitconfig was installed"
 
-if [ ! -e /home/slash3b/.config/redshift/redshift.conf ]; then
-    mkdir -p /home/slash3b/.config/redshift
-    # .config/redshift/redshift.conf
-    cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift/redshift.conf
+# Redshift
+
+if [ ! -e /home/slash3b/.config/redshift.conf ]; then
+    cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift.conf
 fi
 
-chattr -i /home/slash3b/.config/redshift/redshift.conf
+chattr -i /home/slash3b/.config/redshift.conf
 
-cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift/redshift.conf
+cp -f /home/slash3b/dotfiles/sources/redshift.conf /home/slash3b/.config/redshift.conf
 
-chown -R slash3b:slash3b /home/slash3b/.config/redshift
+chown slash3b:slash3b /home/slash3b/.config/redshift.conf
 
-chattr +i /home/slash3b/.config/redshift/redshift.conf
+chattr +i /home/slash3b/.config/redshift.conf
 
 echo ".redshift was installed"
 
