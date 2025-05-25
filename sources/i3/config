@@ -184,6 +184,8 @@ bindsym XF86MonBrightnessDown exec "sudo light -U 15 && notify-send 'Brightness 
 # bindsym $mod+l exec --no-startup-id i3lock -c 000000 -d
 bindsym $mod+l exec --no-startup-id xscreensaver-command -lock && i3lock -c 000000 -d
 
+# STARTUP commands
+
 # https://dougie.io/linux/hidpi-retina-i3wm/
 
 # should be fine to run picom here, right?
@@ -210,6 +212,9 @@ exec --no-startup-id redshift-gtk
 
 # redshift applet
 exec --no-startup-id syncthing-gtk
+
+# run screensaver daemon
+exec --no-startup-id xscreensaver -no-splash
 
 # move focused workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right

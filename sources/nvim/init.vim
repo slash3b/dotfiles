@@ -51,6 +51,9 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Hightlight yanked text
 Plug 'machakann/vim-highlightedyank'
 
+" Vim HardTime
+Plug 'takac/vim-hardtime'
+
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp
 
