@@ -174,3 +174,5 @@ sudo apt install libxxf86vm-dev
 # screensaver
 sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl-extra
 
+# needed for netstat
+sudo apt install --yes net-tools
