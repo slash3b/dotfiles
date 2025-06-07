@@ -176,3 +176,6 @@ sudo apt install xscreensaver xscreensaver-data-extra xscreensaver-gl-extra
 
 # needed for netstat
 sudo apt install --yes net-tools
+# disc utilities
+sudo apt install --yes duf ncdu
+
