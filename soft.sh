@@ -179,3 +179,6 @@ sudo apt install --yes net-tools
 # disc utilities
 sudo apt install --yes duf ncdu
 
+# DNS utils
+sudo apt install --yes dnsutils
+
