@@ -182,3 +182,7 @@ sudo apt install --yes duf ncdu
 # DNS utils
 sudo apt install --yes dnsutils
 
+sudo apt install --yes whois
+
+# calculator
+sudo apt install --yes bc
