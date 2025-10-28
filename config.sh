@@ -20,10 +20,21 @@ fi
 # and I want to make only "copy" immutable, the source file in the repo should be mutable
 # this way I am forced to update in one repository only.
 
-chattr -i -f /home/slash3b/.config/.alacritty.yml 
-cp -f /home/slash3b/dotfiles/sources/.alacritty.yml /home/slash3b/.config/.alacritty.yml
-chown slash3b:slash3b /home/slash3b/.config/.alacritty.yml 
-chattr +i -f /home/slash3b/.config/.alacritty.yml 
+mkdir -p ~/.config/alacritty
+touch ~/.config/alacritty/alacritty.toml
+
+#alacritty theme
+mkdir -p /home/slash3b/.config/alacritty/themes
+cp -f /home/slash3b/dotfiles/sources/alacritty/themes/alabaster.toml /home/slash3b/.config/alacritty/themes/alabaster.toml
+
+# todo: this silently fails when file is not present in home directory
+mkdir -p /home/slash3b/.config/alacritty
+chattr -i -f /home/slash3b/.config/alacritty/alacritty.toml
+cp -f /home/slash3b/dotfiles/sources/alacritty/alacritty.toml /home/slash3b/.config/alacritty/alacritty.toml
+chown slash3b:slash3b /home/slash3b/.config/alacritty/alacritty.toml
+chattr +i -f /home/slash3b/.config/alacritty/alacritty.toml
+
+
 echo "alacritty conf was installed"
 
 mkdir -p /home/slash3b/.config/tmux

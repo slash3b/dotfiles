@@ -41,6 +41,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " Monochrome theme
 Plug 'fxn/vim-monochrome'
 
+" alabaster theme
+Plug 'https://git.sr.ht/~p00f/alabaster.nvim'
+
 " FZF 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

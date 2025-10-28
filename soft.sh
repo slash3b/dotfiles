@@ -186,3 +186,5 @@ sudo apt install --yes whois
 
 # calculator
 sudo apt install --yes bc
+
+

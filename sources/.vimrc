@@ -27,7 +27,8 @@ set incsearch           " incremental search is on
 let mapleader=","
 
 " hit F2 in insert mode to paste corretly data
-set pastetoggle=<F2>
+" got deprecates, so commented out
+"set pastetoggle=<F2>
 
 " fold enabled using indent
 set foldmethod=indent
@@ -75,7 +76,13 @@ set listchars=tab:¦\ ,trail:⋅,extends:❯,precedes:❮
 " colorize what exceeds 120 char line
 set colorcolumn=120
 
-colorscheme monochrome
+" colorscheme monochrome
+
+" alabalster theme setup
+
+set termguicolors
+colorscheme alabaster
+set background=light
 
 let loaded_matchparen=1
 
