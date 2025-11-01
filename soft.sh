@@ -66,11 +66,11 @@ apt install -y \
 	traceroute \
 	direnv \
 	coreutils \
-        autorandr \
+    autorandr \
 	gcc \
 	gdb \
 	nasm \
-	caffeine
+	caffeine \
 	ncal \
 	tcpdump \
 	xclip \
