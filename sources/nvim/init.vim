@@ -4,6 +4,14 @@
 set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 
+" ctags setup
+set tags=./tags;
+" gd = go to definition via ctags
+nnoremap <silent> gd <C-]>
+" gD = go back in tag stack
+nnoremap <silent> gD <C-t>
+
+
 "
 " auto install
 " source: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation

@@ -187,4 +187,6 @@ sudo apt install --yes whois
 # calculator
 sudo apt install --yes bc
 
+# nvim attempt
+sudo apt install universal-ctags
 
