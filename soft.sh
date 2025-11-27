@@ -191,7 +191,5 @@ sudo apt install --yes bc
 sudo apt install universal-ctags
 
 # performance
-sudo apt update
 sudo apt install linux-perf
-
 
