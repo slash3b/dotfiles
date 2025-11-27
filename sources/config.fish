@@ -45,6 +45,8 @@ alias vim='nvim'
 # golang ENVs
 go env -w GOPATH=/home/slash3b/go-pkgs
 
+
+# PATHs management
 # you need to set this up if using private repositories,
 # otherwise go get will hit public services only attempting to fetch package info
 # https://sum.golang.org/lookup/github.com/private_org/repo_name@v1.5.0
@@ -54,6 +56,7 @@ go env -w GOPATH=/home/slash3b/go-pkgs
 
 set -Ua fish_user_paths "$HOME/go/bin"
 set -Ua fish_user_paths "$HOME/go-pkgs/bin"
+set -Ua fish_user_paths "$HOME/.local/bin"
 
 # direnv 
 # trigger direnv at prompt, and on every arrow-based directory change (default)
@@ -72,8 +75,6 @@ ssh-add -q
 if isatty
     set -x GPG_TTY (tty)
 end
-
-
 
 ##### FUNCTIONS
 
@@ -171,66 +172,4 @@ function goget
 
     echo "installed $goversion!"
 
-end
-
-function httpstatuses
-    echo "100 Continue
-    101 Switching Protocols
-    102 Processing
-    200 OK
-    201 Created
-    202 Accepted
-    203 Non-Authoritative Information
-    204 No Content
-    205 Reset Content
-    206 Partial Content
-    207 Multi-Status
-    208 Already Reported
-    300 Multiple Choices
-    301 Moved Permanently
-    302 Found
-    303 See Other
-    304 Not Modified
-    305 Use Proxy
-    307 Temporary Redirect
-    400 Bad Request
-    401 Unauthorized
-    402 Payment Required
-    403 Forbidden
-    404 Not Found
-    405 Method Not Allowed
-    406 Not Acceptable
-    407 Proxy Authentication Required
-    408 Request Timeout
-    409 Conflict
-    410 Gone
-    411 Length Required
-    412 Precondition Failed
-    413 Request Entity Too Large
-    414 Request-URI Too Large
-    415 Unsupported Media Type
-    416 Request Range Not Satisfiable
-    417 Expectation Failed
-    418 I'm a teapot
-    420 Blaze it
-    422 Unprocessable Entity
-    423 Locked
-    424 Failed Dependency
-    425 No code
-    426 Upgrade Required
-    428 Precondition Required
-    429 Too Many Requests
-    431 Request Header Fields Too Large
-    449 Retry with
-    500 Internal Server Error
-    501 Not Implemented
-    502 Bad Gateway
-    503 Service Unavailable
-    504 Gateway Timeout
-    505 HTTP Version Not Supported
-    506 Variant Also Negotiates
-    507 Insufficient Storage
-    509 Bandwidth Limit Exceeded
-    510 Not Extended
-    511 Network Authentication Required"
 end
