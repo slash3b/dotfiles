@@ -190,3 +190,8 @@ sudo apt install --yes bc
 # nvim attempt
 sudo apt install universal-ctags
 
+# performance
+sudo apt update
+sudo apt install linux-perf
+
+
