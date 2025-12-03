@@ -93,9 +93,19 @@ function tempygo
     echo "package main
 
 func main() {
-        println(`hello`)
+    println(`hello`)
 }" >main.go
     vim main.go
+end
+
+function tempyc
+    tempy
+    echo "#include <stdio.h>
+
+int main(void) {
+    printf(\"hello C\n\");
+}" >main.c
+    vim main.c
 end
 
 # goget function will attempt to download golang version
