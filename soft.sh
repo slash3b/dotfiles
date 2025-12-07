@@ -193,3 +193,5 @@ sudo apt install universal-ctags
 # performance
 sudo apt install linux-perf
 
+# for video recording
+sudo apt install peek
