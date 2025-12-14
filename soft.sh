@@ -195,3 +195,6 @@ sudo apt install linux-perf
 
 # for video recording
 sudo apt install peek
+
+# fonts
+sudo apt install fonts-firacode
