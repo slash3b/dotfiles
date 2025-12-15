@@ -19,7 +19,7 @@ set smartindent         " smart indent : )
 set noerrorbells        " no bells and whistles  
 
 set number              " line numbers on 
-set relativenumber
+" set relativenumber
 set nowrap              " no wrapping 
 set incsearch           " incremental search is on
 
@@ -65,9 +65,6 @@ nnoremap <leader>r <cmd>Rg<cr>
 " => Visuals
 """""""""""""""""""""""""""""""""""""""""""""""
 
-" 256 colors
-set t_Co=256
-
 " toggle invisible characters
 set invlist
 set list
@@ -76,6 +73,7 @@ set listchars=tab:¦\ ,trail:⋅,extends:❯,precedes:❮
 " colorize what exceeds 120 char line
 set colorcolumn=120
 
+" great theme
 " colorscheme monochrome
 
 " alabalster theme setup
@@ -84,7 +82,9 @@ set termguicolors
 colorscheme alabaster
 set background=light
 
-let loaded_matchparen=1
+" Custom subtle highlight for matching brackets
+" guibg=#ddd7ca matches the Alabaster 'selection' or 'dim' color
+highlight MatchParen guibg=#ddd7ca guifg=NONE gui=bold
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " => References
