@@ -85,6 +85,14 @@ chattr +i -f /home/slash3b/.config/i3/config
 chattr +i -f /home/slash3b/.config/i3/status.conf
 echo "i3 conf has been updated"
 
+# picom config
+
+mkdir -p /home/slash3b/.config/picom
+chattr -i -f /home/slash3b/.config/picom/picom.conf
+cp -f /home/slash3b/dotfiles/sources/picom/picom.conf /home/slash3b/.config/picom/picom.conf
+chown slash3b:slash3b /home/slash3b/.config/picom/picom.conf
+chattr +i -f /home/slash3b/.config/picom/picom.conf
+echo "picom conf has been updated"
 
 # i3
 chattr -i -f /home/slash3b/.config/fish/config.fish
@@ -184,5 +192,6 @@ chown slash3b:slash3b /home/slash3b/.config/redshift.conf
 chattr +i /home/slash3b/.config/redshift.conf
 
 echo ".redshift was installed"
+
 
 exit 0
