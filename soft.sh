@@ -198,3 +198,16 @@ sudo apt install peek
 
 # fonts
 sudo apt install fonts-firacode
+
+sudo apt install nmap
+
+# do this since tailscale conflicts with NetworkManager over /etc/resolv.conf
+sudo apt install openresolv
+
+# sudo nano /etc/NetworkManager/NetworkManager.conf
+# paste:
+# [main]
+# rc-manager=resolvconf
+# sudo systemctl restart NetworkManager
+# sudo tailscale up --reset
+
