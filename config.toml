@@ -1,0 +1,7 @@
+[packages]
+list = [
+    "ripgrep",
+    "tmux",
+    "neofetch",
+]
+
