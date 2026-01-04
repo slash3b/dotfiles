@@ -11,7 +11,6 @@ nnoremap <silent> gd <C-]>
 " gD = go back in tag stack
 nnoremap <silent> gD <C-t>
 
-
 "
 " auto install
 " source: https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
@@ -64,6 +63,9 @@ Plug 'machakann/vim-highlightedyank'
 
 " Vim HardTime
 Plug 'takac/vim-hardtime'
+
+" ctags automatic refresh
+Plug 'ludovicchabant/vim-gutentags'
 
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp
