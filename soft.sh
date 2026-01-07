@@ -211,3 +211,5 @@ sudo apt install openresolv
 # sudo systemctl restart NetworkManager
 # sudo tailscale up --reset
 
+# format c files with clang-format
+sudo apt update && sudo apt install clang-format
