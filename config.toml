@@ -107,14 +107,14 @@ packages = [
 # Packages with post-install hooks or special handling
 [[debian.package]]
 name = "pipewire-audio"
-post_install = """
+post_install = '''
 systemctl --user --now enable wireplumber.service
-"""
+'''
 
 [[debian.package]]
 name = "openresolv"
-post_install = """
-sed -i '/^\[main\]/a rc-manager=resolvconf' /etc/NetworkManager/NetworkManager.conf
-systemctl restart NetworkManager
-tailscale up --reset
-"""
+post_install = '''
+sudo sed -i '/^\[main\]/a rc-manager=resolvconf' /etc/NetworkManager/NetworkManager.conf
+sudo systemctl restart NetworkManager
+sudo tailscale up --reset
+'''
