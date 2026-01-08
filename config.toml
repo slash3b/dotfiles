@@ -24,7 +24,7 @@ packages = [
     "blueman",
     "syncthing",
     "syncthing-gtk",
-    "dnsutils",
+    "bind9-dnsutils",
     "whois",
     "nmap",
     "traceroute",
