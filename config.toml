@@ -1,7 +1,99 @@
-[packages]
-list = [
-    "ripgrep",
+[debian]
+packages = [
+    # Desktop Environment
+    "i3",
+    "i3blocks",
+    "lightdm",
+    "x11-xserver-utils",
+    "picom",
+    "rofi",
+    "feh",
+    "caffeine",
+    "xscreensaver",
+    "xscreensaver-data-extra",
+    "xscreensaver-gl-extra",
+
+    # Terminal & Shell
+    "alacritty",
     "tmux",
+    "fish",
+
+    # Network Tools
+    "nm-tray",
+    "blueman",
+    "syncthing",
+    "syncthing-gtk",
+    "dnsutils",
+    "whois",
+    "nmap",
+    "traceroute",
+    "tcpdump",
+    "net-tools",
+
+    # Display Management
+    "autorandr",
+    "redshift-gtk",
+    "light",
+
+    # Development Tools
+    "git",
+    "neovim",
+    "make",
+    "gcc",
+    "gdb",
+    "nasm",
+    "universal-ctags",
+    "clang-format",
+
+    # System Utilities
+    "tree",
+    "htop",
+    "btop",
     "neofetch",
+    "ripgrep",
+    "fzf",
+    "jq",
+    "curl",
+    "wget",
+    "zip",
+    "unzip",
+    "direnv",
+    "coreutils",
+    "ncal",
+    "xclip",
+    "duf",
+    "ncdu",
+    "bc",
+
+    # Security & Authentication
+    "gnupg2",
+    "pinentry-tty",
+
+    # File Manager & Media
+    "thunar",
+    "vlc",
+    "transmission",
+    "evince",
+    "xfce4-screenshooter",
+    "peek",
+
+    # Fonts
+    "fonts-firacode",
+
+    # Performance Tools
+    "linux-perf",
+
+    # Documentation
+    "glibc-doc",
+
+    # Libraries (for ebitenengine/game development)
+    # "libx11-dev",
+    # "libxcomposite-dev",
+    # "libxrandr-dev",
+    # "mesa-common-dev",
+    # "libxcursor-dev",
+    # "libxinerama-dev",
+    # "libxi-dev",
+    # "libxxf86vm-dev",
 ]
 
