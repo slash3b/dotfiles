@@ -1,4 +1,5 @@
 [debian]
+# Simple packages (no post-install hooks needed)
 packages = [
     # Desktop Environment
     "i3",
@@ -95,5 +96,25 @@ packages = [
     # "libxinerama-dev",
     # "libxi-dev",
     # "libxxf86vm-dev",
+
+    # Audio (pipewire dependencies)
+    "wireplumber",
+    "pipewire-pulse",
+    "pipewire-alsa",
+    "libspa-0.2-bluetooth",
 ]
 
+# Packages with post-install hooks or special handling
+[[debian.package]]
+name = "pipewire-audio"
+post_install = """
+systemctl --user --now enable wireplumber.service
+"""
+
+[[debian.package]]
+name = "openresolv"
+post_install = """
+sed -i '/^\[main\]/a rc-manager=resolvconf' /etc/NetworkManager/NetworkManager.conf
+systemctl restart NetworkManager
+tailscale up --reset
+"""
