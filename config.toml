@@ -118,3 +118,82 @@ sudo sed -i '/^\[main\]/a rc-manager=resolvconf' /etc/NetworkManager/NetworkMana
 sudo systemctl restart NetworkManager
 sudo tailscale up --reset
 '''
+
+[dotfiles]
+source_dir = "~/dotfiles/sources"
+
+[[dotfiles.link]]
+src = "alacritty/alacritty.toml"
+dest = "~/.config/alacritty/alacritty.toml"
+
+[[dotfiles.link]]
+src = "alacritty/themes/alabaster.toml"
+dest = "~/.config/alacritty/themes/alabaster.toml"
+
+[[dotfiles.link]]
+src = "tmux/tmux.conf"
+dest = "~/.config/tmux/tmux.conf"
+
+[[dotfiles.link]]
+src = "nvim/init.vim"
+dest = "~/.config/nvim/init.vim"
+
+[[dotfiles.link]]
+src = ".vimrc"
+dest = "~/.vimrc"
+
+[[dotfiles.link]]
+src = "i3/config"
+dest = "~/.config/i3/config"
+
+[[dotfiles.link]]
+src = "i3/status.conf"
+dest = "~/.config/i3/status.conf"
+
+[[dotfiles.link]]
+src = "i3/seattle.jpg"
+dest = "~/.config/i3/seattle.jpg"
+
+[[dotfiles.link]]
+src = "picom/picom.conf"
+dest = "~/.config/picom/picom.conf"
+
+[[dotfiles.link]]
+src = "config.fish"
+dest = "~/.config/fish/config.fish"
+
+[[dotfiles.link]]
+src = "autorandr/docked/config"
+dest = "~/.config/autorandr/docked/config"
+
+[[dotfiles.link]]
+src = "autorandr/docked/setup"
+dest = "~/.config/autorandr/docked/setup"
+
+[[dotfiles.link]]
+src = "autorandr/mobile/config"
+dest = "~/.config/autorandr/mobile/config"
+
+[[dotfiles.link]]
+src = "autorandr/mobile/setup"
+dest = "~/.config/autorandr/mobile/setup"
+
+[[dotfiles.link]]
+src = ".ssh/config"
+dest = "~/.ssh/config"
+
+[[dotfiles.link]]
+src = ".gitconfig"
+dest = "~/.gitconfig"
+
+[[dotfiles.link]]
+src = ".gitconfig.work"
+dest = "~/.gitconfig.work"
+
+[[dotfiles.link]]
+src = ".gitignore"
+dest = "~/.gitignore"
+
+[[dotfiles.link]]
+src = "redshift.conf"
+dest = "~/.config/redshift.conf"

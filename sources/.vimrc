@@ -76,7 +76,9 @@ set colorcolumn=120
 " great theme
 " colorscheme monochrome
 
+" ----------------------
 " alabalster theme setup
+" ----------------------
 
 set termguicolors
 colorscheme alabaster
