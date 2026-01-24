@@ -114,9 +114,17 @@ systemctl --user --now enable wireplumber.service
 [[debian.package]]
 name = "openresolv"
 post_install = '''
-sudo sed -i '/^\[main\]/a rc-manager=resolvconf' /etc/NetworkManager/NetworkManager.conf
+rm /etc/resolv.conf
+sudo resolvconf -u
+sudo systemctl restart tailscaled
+
+// check logs, you should see dns: using "openresolv"
+// journalctl -u tailscaled | grep "dns:"
+
+sudo sed -i '/^\[main\]/a dns=default' /etc/NetworkManager/NetworkManager.conf
+
 sudo systemctl restart NetworkManager
-sudo tailscale up --reset
+//sudo tailscale up --reset
 '''
 
 [dotfiles]
