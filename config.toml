@@ -130,78 +130,79 @@ sudo systemctl restart NetworkManager
 [dotfiles]
 source_dir = "~/dotfiles/sources"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "alacritty/alacritty.toml"
 dest = "~/.config/alacritty/alacritty.toml"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "alacritty/themes/alabaster.toml"
 dest = "~/.config/alacritty/themes/alabaster.toml"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "tmux/tmux.conf"
 dest = "~/.config/tmux/tmux.conf"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "nvim/init.vim"
 dest = "~/.config/nvim/init.vim"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = ".vimrc"
 dest = "~/.vimrc"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "i3/config"
 dest = "~/.config/i3/config"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "i3/status.conf"
 dest = "~/.config/i3/status.conf"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "i3/seattle.jpg"
 dest = "~/.config/i3/seattle.jpg"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "picom/picom.conf"
 dest = "~/.config/picom/picom.conf"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "config.fish"
 dest = "~/.config/fish/config.fish"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "autorandr/docked/config"
 dest = "~/.config/autorandr/docked/config"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "autorandr/docked/setup"
 dest = "~/.config/autorandr/docked/setup"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "autorandr/mobile/config"
 dest = "~/.config/autorandr/mobile/config"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "autorandr/mobile/setup"
 dest = "~/.config/autorandr/mobile/setup"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = ".ssh/config"
 dest = "~/.ssh/config"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = ".gitconfig"
 dest = "~/.gitconfig"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = ".gitconfig.work"
 dest = "~/.gitconfig.work"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = ".gitignore"
 dest = "~/.gitignore"
 
-[[dotfiles.link]]
+[[dotfiles.file]]
 src = "redshift.conf"
 dest = "~/.config/redshift.conf"
+mode = "copy"
