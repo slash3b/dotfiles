@@ -107,6 +107,9 @@ packages = [
     "pipewire-pulse",
     "pipewire-alsa",
     "libspa-0.2-bluetooth",
+
+    # video
+    "ffmpeg"
 ]
 
 # Packages with post-install hooks or special handling
