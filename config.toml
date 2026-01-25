@@ -1,5 +1,9 @@
 [linux]
 # Simple packages (no post-install hooks needed)
+
+# todo: add go, rust and cli which is 
+# sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+# sudo chmod a+rx /usr/local/bin/youtube-dl
 packages = [
     # Desktop Environment
     "foobarblah",
