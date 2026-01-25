@@ -1,7 +1,8 @@
-[debian]
+[linux]
 # Simple packages (no post-install hooks needed)
 packages = [
     # Desktop Environment
+    "foobarblah",
     "i3",
     "i3blocks",
     "lightdm",
@@ -105,13 +106,13 @@ packages = [
 ]
 
 # Packages with post-install hooks or special handling
-[[debian.package]]
+[[linux.package]]
 name = "pipewire-audio"
 post_install = '''
 systemctl --user --now enable wireplumber.service
 '''
 
-[[debian.package]]
+[[linux.package]]
 name = "openresolv"
 post_install = '''
 rm /etc/resolv.conf
