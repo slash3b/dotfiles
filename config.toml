@@ -6,7 +6,6 @@
 # sudo chmod a+rx /usr/local/bin/youtube-dl
 packages = [
     # Desktop Environment
-    "foobarblah",
     "i3",
     "i3blocks",
     "lightdm",
