@@ -108,7 +108,8 @@ packages = [
     "libspa-0.2-bluetooth",
 
     # video
-    "ffmpeg"
+    "ffmpeg",
+    "brightnessctl",
 ]
 
 # Packages with post-install hooks or special handling
