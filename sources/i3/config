@@ -176,8 +176,10 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute soun
 # pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # screen brightness controls
-bindsym XF86MonBrightnessUp exec "brightnessctl set +15% && notify-send 'Brightness Up'"
-bindsym XF86MonBrightnessDown exec "brightnessctl set 15%- && notify-send 'Brightness Down'"
+# backticks are used because i3 interprets $() as its own variable syntax,
+# but passes backticks through to sh which expands them as command substitution
+bindsym XF86MonBrightnessUp exec "brightnessctl set +15% && notify-send Brightness `brightnessctl -m | cut -d, -f4`"
+bindsym XF86MonBrightnessDown exec "brightnessctl set 15%- && notify-send Brightness `brightnessctl -m | cut -d, -f4`"
 
 # lock screen
 # bindsym $mod+l exec --no-startup-id i3lock -c 000000 -d
