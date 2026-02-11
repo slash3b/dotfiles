@@ -6,8 +6,11 @@ let &packpath = &runtimepath
 
 " ctags setup
 set tags=./tags;
+
 " gd = go to definition via ctags
-nnoremap <silent> gd <C-]>
+" uses tjump: direct on 1 match, picker on many
+nnoremap <silent> gd g<C-]>
+
 " gD = go back in tag stack
 nnoremap <silent> gD <C-t>
 

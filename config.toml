@@ -1,9 +1,6 @@
-[linux]
+[apt]
 # Simple packages (no post-install hooks needed)
 
-# todo: add go, rust and cli which is 
-# sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-# sudo chmod a+rx /usr/local/bin/youtube-dl
 packages = [
     # Desktop Environment
     "i3",
@@ -113,13 +110,13 @@ packages = [
 ]
 
 # Packages with post-install hooks or special handling
-[[linux.package]]
+[[apt.post_hook]]
 name = "pipewire-audio"
 post_install = '''
 systemctl --user --now enable wireplumber.service
 '''
 
-[[linux.package]]
+[[apt.post_hook]]
 name = "openresolv"
 post_install = '''
 rm /etc/resolv.conf
@@ -214,3 +211,7 @@ dest = "~/.gitignore"
 src = "redshift.conf"
 dest = "~/.config/redshift.conf"
 mode = "copy"
+
+[[git]]
+url = "https://github.com/tmux-plugins/tpm"
+dest = "~/.tmux/plugins/tpm"
