@@ -31,7 +31,7 @@
       "installed_at": "2026-02-15T20:38:56+02:00"
     },
     "btop": {
-      "version": "1.3.2-0.1",
+      "version": "1.4.6-01",
       "manager": "apt",
       "installed_at": "2026-02-15T20:38:56+02:00"
     },
@@ -61,7 +61,7 @@
       "installed_at": "2026-02-15T20:38:56+02:00"
     },
     "duf": {
-      "version": "0.8.1-2+b9",
+      "version": "0.9.1",
       "manager": "apt",
       "installed_at": "2026-02-15T20:38:56+02:00"
     },
@@ -371,5 +371,83 @@
       "installed_at": "2026-02-15T20:38:56+02:00"
     }
   },
-  "updated_at": "2026-02-15T20:42:25+02:00"
+  "dotfiles": {
+    "~/.config/alacritty/alacritty.toml": {
+      "source": "/home/slash3b/dotfiles/sources/alacritty/alacritty.toml",
+      "mode": "link"
+    },
+    "~/.config/alacritty/themes/alabaster.toml": {
+      "source": "/home/slash3b/dotfiles/sources/alacritty/themes/alabaster.toml",
+      "mode": "link"
+    },
+    "~/.config/autorandr/docked/config": {
+      "source": "/home/slash3b/dotfiles/sources/autorandr/docked/config",
+      "mode": "link"
+    },
+    "~/.config/autorandr/docked/setup": {
+      "source": "/home/slash3b/dotfiles/sources/autorandr/docked/setup",
+      "mode": "link"
+    },
+    "~/.config/autorandr/mobile/config": {
+      "source": "/home/slash3b/dotfiles/sources/autorandr/mobile/config",
+      "mode": "link"
+    },
+    "~/.config/autorandr/mobile/setup": {
+      "source": "/home/slash3b/dotfiles/sources/autorandr/mobile/setup",
+      "mode": "link"
+    },
+    "~/.config/fish/config.fish": {
+      "source": "/home/slash3b/dotfiles/sources/config.fish",
+      "mode": "link"
+    },
+    "~/.config/i3/config": {
+      "source": "/home/slash3b/dotfiles/sources/i3/config",
+      "mode": "link"
+    },
+    "~/.config/i3/seattle.jpg": {
+      "source": "/home/slash3b/dotfiles/sources/i3/seattle.jpg",
+      "mode": "link"
+    },
+    "~/.config/i3/status.conf": {
+      "source": "/home/slash3b/dotfiles/sources/i3/status.conf",
+      "mode": "link"
+    },
+    "~/.config/nvim/init.vim": {
+      "source": "/home/slash3b/dotfiles/sources/nvim/init.vim",
+      "mode": "link"
+    },
+    "~/.config/picom/picom.conf": {
+      "source": "/home/slash3b/dotfiles/sources/picom/picom.conf",
+      "mode": "link"
+    },
+    "~/.config/redshift.conf": {
+      "source": "/home/slash3b/dotfiles/sources/redshift.conf",
+      "mode": "copy"
+    },
+    "~/.config/tmux/tmux.conf": {
+      "source": "/home/slash3b/dotfiles/sources/tmux/tmux.conf",
+      "mode": "link"
+    },
+    "~/.gitconfig": {
+      "source": "/home/slash3b/dotfiles/sources/.gitconfig",
+      "mode": "link"
+    },
+    "~/.gitconfig.work": {
+      "source": "/home/slash3b/dotfiles/sources/.gitconfig.work",
+      "mode": "link"
+    },
+    "~/.gitignore": {
+      "source": "/home/slash3b/dotfiles/sources/.gitignore",
+      "mode": "link"
+    },
+    "~/.ssh/config": {
+      "source": "/home/slash3b/dotfiles/sources/.ssh/config",
+      "mode": "link"
+    },
+    "~/.vimrc": {
+      "source": "/home/slash3b/dotfiles/sources/.vimrc",
+      "mode": "link"
+    }
+  },
+  "updated_at": "2026-02-16T22:57:16+02:00"
 }
