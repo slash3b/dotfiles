@@ -213,6 +213,10 @@ src = "redshift.conf"
 dest = "~/.config/redshift.conf"
 mode = "copy"
 
+[[dotfiles.file]]
+src = "btop/btop.conf"
+dest = "~/.config/btop/btop.conf"
+
 [[git]]
 url = "https://github.com/tmux-plugins/tpm"
 dest = "~/.tmux/plugins/tpm"
