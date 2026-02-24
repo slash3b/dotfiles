@@ -11,7 +11,7 @@ set $barcmd i3status
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -165,9 +165,9 @@ bar {
 # bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 # bindsym XF86AudioMicMute exec amixer set Capture toggle # mute mic
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%- #decrease sound volume
+bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle # mute sound
 
 # pactl set-sink-mute @DEFAULT_SINK@ toggle
 # pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -189,8 +189,7 @@ bindsym $mod+l exec --no-startup-id xscreensaver-command -lock && i3lock -c 0000
 
 # https://dougie.io/linux/hidpi-retina-i3wm/
 
-# should be fine to run picom here, right?
-exec --no-startup-id picom -b --backend glx --vsync
+exec --no-startup-id picom -b
 
 # walls <3
 # /home/slash3b/.config/i3

@@ -2,6 +2,8 @@
 # Simple packages (no post-install hooks needed)
 
 packages = [
+
+"sudo"
     # Desktop Environment
     "i3",
     "i3blocks",
@@ -31,7 +33,7 @@ packages = [
     "traceroute",
     "tcpdump",
     "net-tools",
-    "network-manager-applet"
+    "network-manager-applet",
 
     # Display Management
     "autorandr",
@@ -135,6 +137,8 @@ sudo systemctl restart NetworkManager
 
 [dotfiles]
 source_dir = "~/dotfiles/sources"
+
+# fish_ssh_agent
 
 [[dotfiles.file]]
 src = "alacritty/alacritty.toml"
