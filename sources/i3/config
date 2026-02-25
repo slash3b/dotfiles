@@ -189,7 +189,8 @@ bindsym $mod+l exec --no-startup-id xscreensaver-command -lock && i3lock -c 0000
 
 # https://dougie.io/linux/hidpi-retina-i3wm/
 
-exec --no-startup-id picom -b
+# picom disabled — broken on AMD Strix (Radeon 890M), re-enable after Mesa updates
+# exec --no-startup-id picom -b
 
 # walls <3
 # /home/slash3b/.config/i3

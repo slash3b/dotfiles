@@ -3,7 +3,9 @@
 
 packages = [
 
-"sudo"
+    "sudo",
+    "lm-sensors",
+
     # Desktop Environment
     "i3",
     "i3blocks",
@@ -175,6 +177,13 @@ dest = "~/.config/i3/seattle.jpg"
 [[dotfiles.file]]
 src = "picom/picom.conf"
 dest = "~/.config/picom/picom.conf"
+
+# NOTE: requires sudo to deploy — /etc/X11/xorg.conf.d/ is root-owned
+# sudo cp ~/dotfiles/sources/xorg/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
+
+[[dotfiles.file]]
+src = "xorg/20-amdgpu.conf"
+dest = "/etc/X11/xorg.conf.d/20-amdgpu.conf"
 
 [[dotfiles.file]]
 src = "config.fish"
