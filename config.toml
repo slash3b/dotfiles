@@ -178,12 +178,11 @@ dest = "~/.config/i3/seattle.jpg"
 src = "picom/picom.conf"
 dest = "~/.config/picom/picom.conf"
 
-# NOTE: requires sudo to deploy — /etc/X11/xorg.conf.d/ is root-owned
-# sudo cp ~/dotfiles/sources/xorg/20-amdgpu.conf /etc/X11/xorg.conf.d/20-amdgpu.conf
-
 [[dotfiles.file]]
 src = "xorg/20-amdgpu.conf"
 dest = "/etc/X11/xorg.conf.d/20-amdgpu.conf"
+mode = "copy"
+sudo = true
 
 [[dotfiles.file]]
 src = "config.fish"
@@ -199,11 +198,16 @@ dest = "~/.config/autorandr/docked/setup"
 
 [[dotfiles.file]]
 src = "autorandr/mobile/config"
-dest = "~/.config/autorandr/mobile/config"
+dest = "~/.config/autorandr/laptop/config"
 
 [[dotfiles.file]]
 src = "autorandr/mobile/setup"
-dest = "~/.config/autorandr/mobile/setup"
+dest = "~/.config/autorandr/laptop/setup"
+
+[[dotfiles.file]]
+src = "autorandr/postswitch"
+dest = "~/.config/autorandr/postswitch"
+executable = true
 
 [[dotfiles.file]]
 src = ".ssh/config"

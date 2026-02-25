@@ -1,0 +1,5 @@
+#!/bin/sh
+WALLPAPER="$HOME/.config/i3/seattle.jpg"
+NUM=$(xrandr --listmonitors | awk 'NR==1{print $2}')
+IMGS=$(seq 1 "$NUM" | xargs -I{} echo "$WALLPAPER" | tr '\n' ' ')
+feh --bg-fill $IMGS
