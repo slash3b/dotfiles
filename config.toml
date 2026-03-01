@@ -112,6 +112,9 @@ packages = [
     # video
     "ffmpeg",
     "brightnessctl",
+
+    # Graphics, visualization
+    "graphviz",
 ]
 
 # Packages with post-install hooks or special handling
@@ -232,4 +235,8 @@ version = "v0.9.2"
 
 [[go]]
 path = "github.com/daixiang0/gci"
+version = "latest"
+
+[[go]]
+path = "github.com/Zxilly/go-size-analyzer/cmd/gsa"
 version = "latest"
