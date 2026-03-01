@@ -6,7 +6,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $menu "rofi -combi-modi run,drun -show combi -font 'Pango 20'"
+set $menu "rofi -combi-modi run,drun -show combi -font 'Pango 15'"
 set $barcmd i3status
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -190,7 +190,7 @@ bindsym $mod+l exec --no-startup-id xscreensaver-command -lock && i3lock -c 0000
 # https://dougie.io/linux/hidpi-retina-i3wm/
 
 # picom disabled — broken on AMD Strix (Radeon 890M), re-enable after Mesa updates
-# exec --no-startup-id picom -b
+exec --no-startup-id picom -b
 
 # walls <3
 # /home/slash3b/.config/i3
