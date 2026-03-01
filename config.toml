@@ -188,26 +188,10 @@ sudo = true
 src = "config.fish"
 dest = "~/.config/fish/config.fish"
 
-[[dotfiles.file]]
-src = "autorandr/docked/config"
-dest = "~/.config/autorandr/docked/config"
+[[dotfiles.dir]]
+src = "autorandr"
+dest = "~/.config/autorandr"
 
-[[dotfiles.file]]
-src = "autorandr/docked/setup"
-dest = "~/.config/autorandr/docked/setup"
-
-[[dotfiles.file]]
-src = "autorandr/mobile/config"
-dest = "~/.config/autorandr/laptop/config"
-
-[[dotfiles.file]]
-src = "autorandr/mobile/setup"
-dest = "~/.config/autorandr/laptop/setup"
-
-[[dotfiles.file]]
-src = "autorandr/postswitch"
-dest = "~/.config/autorandr/postswitch"
-executable = true
 
 [[dotfiles.file]]
 src = ".ssh/config"
