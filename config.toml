@@ -41,6 +41,7 @@ packages = [
     "autorandr",
     "redshift-gtk",
     "light",
+    "libnotify-bin", # notify-send
 
     # Development Tools
     "git",
