@@ -250,3 +250,13 @@ version = "latest"
 [[go]]
 path = "golang.org/x/tools/cmd/deadcode"
 version = "latest"
+
+[[dotfiles.file]]
+src = "claude/settings.json"
+dest = "~/.claude/settings.json"
+mode = "copy"
+
+[[dotfiles.file]]
+src = "claude/hooks/notify.sh"
+dest = "~/.claude/hooks/notify.sh"
+mode = "copy"
