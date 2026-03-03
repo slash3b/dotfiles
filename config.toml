@@ -240,3 +240,7 @@ version = "latest"
 [[go]]
 path = "github.com/Zxilly/go-size-analyzer/cmd/gsa"
 version = "latest"
+
+[[go]]
+path = "golang.org/x/tools/cmd/deadcode"
+version = "latest"
