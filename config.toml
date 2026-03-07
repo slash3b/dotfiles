@@ -196,7 +196,6 @@ dest = "~/.config/fish/config.fish"
 src = "autorandr"
 dest = "~/.config/autorandr"
 
-
 [[dotfiles.file]]
 src = ".ssh/config"
 dest = "~/.ssh/config"
@@ -260,3 +259,11 @@ mode = "copy"
 src = "claude/hooks/notify.sh"
 dest = "~/.claude/hooks/notify.sh"
 mode = "copy"
+
+[[scripts]]
+bin = "claude"
+run = "curl -fsSL https://claude.ai/install.sh | bash"
+plugins = [
+  "claude plugin marketplace add JetBrains/go-modern-guidelines",
+  "claude plugin install modern-go-guidelines",
+]
