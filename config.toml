@@ -267,3 +267,7 @@ plugins = [
   "claude plugin marketplace add JetBrains/go-modern-guidelines",
   "claude plugin install modern-go-guidelines",
 ]
+
+[[scripts]]
+bin = "settle"
+run = "curl -fL https://github.com/slash3b/settle/releases/latest/download/settle-linux-amd64 -o /tmp/settle && chmod +x /tmp/settle && mv -f /tmp/settle ~/.local/bin/settle"
