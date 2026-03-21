@@ -250,6 +250,10 @@ version = "latest"
 path = "golang.org/x/tools/cmd/deadcode"
 version = "latest"
 
+[[go]]
+path = "github.com/go-delve/delve/cmd/dlv"
+version = "latest"
+
 [[dotfiles.file]]
 src = "claude/settings.json"
 dest = "~/.claude/settings.json"
