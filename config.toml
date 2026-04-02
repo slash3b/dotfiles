@@ -250,6 +250,9 @@ path = "golang.org/x/tools/cmd/deadcode"
 [[go]]
 path = "github.com/go-delve/delve/cmd/dlv"
 
+[[go]]
+path = "golang.org/x/perf/cmd/benchstat"
+
 [[dotfiles.file]]
 src = "claude/settings.json"
 dest = "~/.claude/settings.json"
