@@ -269,6 +269,7 @@ run = "curl -fsSL https://claude.ai/install.sh | bash"
 plugins = [
   "claude plugin marketplace add JetBrains/go-modern-guidelines",
   "claude plugin install modern-go-guidelines",
+  "claude plugin marketplace add JuliusBrussee/caveman && claude plugin install caveman@caveman"
 ]
 
 [[scripts]]
