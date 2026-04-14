@@ -87,6 +87,8 @@ packages = [
 
     # Fonts
     "fonts-firacode",
+    # Emojis
+    "fonts-noto-color-emoji",
 
     # Performance Tools
     "linux-perf",
