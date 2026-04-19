@@ -84,6 +84,7 @@ packages = [
     "evince",
     "xfce4-screenshooter",
     "peek",
+    "p7zip-full",
 
     # Fonts
     "fonts-firacode",
