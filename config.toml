@@ -119,6 +119,9 @@ packages = [
 
     # Graphics, visualization
     "graphviz",
+
+    # kubernetes & co
+    "docker.io"
 ]
 
 # Packages with post-install hooks or special handling
@@ -142,6 +145,13 @@ sudo sed -i '/^\[main\]/a dns=default' /etc/NetworkManager/NetworkManager.conf
 
 sudo systemctl restart NetworkManager
 //sudo tailscale up --reset
+'''
+
+[[apt.post_hook]]
+name = "docker.io"
+post_install = '''
+usermod -aG docker "$USER"
+newgrp docker
 '''
 
 [dotfiles]
@@ -216,17 +226,17 @@ src = ".gitignore"
 dest = "~/.gitignore"
 
 [[dotfiles.file]]
-src = "redshift.conf"
-dest = "~/.config/redshift.conf"
-mode = "copy"
-
-[[dotfiles.file]]
 src = "btop/btop.conf"
 dest = "~/.config/btop/btop.conf"
 
 [[dotfiles.file]]
 src = "btop/themes/adwaita.theme"
 dest = "~/.config/btop/themes/adwaita.theme"
+mode = "copy"
+
+[[dotfiles.file]]
+src = "redshift.conf"
+dest = "~/.config/redshift.conf"
 mode = "copy"
 
 [[git]]
@@ -277,3 +287,11 @@ plugins = [
 [[scripts]]
 bin = "settle"
 run = "curl -fL https://github.com/slash3b/settle/releases/latest/download/settle-linux-amd64 -o /tmp/settle && chmod +x /tmp/settle && mv -f /tmp/settle ~/.local/bin/settle"
+
+[[scripts]]
+bin = "minikube"
+run = "curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64 && sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64"
+
+[[scripts]]
+bin = "obsidian"
+run = "curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.AppImage -o /tmp/Obsidian-1.12.7.AppImage && chmod +x /tmp/Obsidian-1.12.7.AppImage && sudo mv /tmp/Obsidian-1.12.7.AppImage /usr/local/bin/obsidian"
