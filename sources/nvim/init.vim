@@ -69,6 +69,9 @@ Plug 'takac/vim-hardtime'
 
 " ctags automatic refresh
 Plug 'ludovicchabant/vim-gutentags'
+" treat go.mod as a project root marker too, so gutentags
+" generates a tags file in Go projects that aren't git repos
+let g:gutentags_project_root = ['go.mod', '.git']
 
 " this is for autocomplete -- oppose to coc.nvim
 " https://github.com/hrsh7th/nvim-cmp
