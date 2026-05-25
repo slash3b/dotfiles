@@ -45,6 +45,9 @@ alias vim='nvim'
 # golang ENVs
 go env -w GOPATH=/home/slash3b/go-pkgs
 
+# BROWSER is specific to pprof selection of browser
+# when doing go tool pprof -http=:8080
+set -x BROWSER=xdg-open
 
 # PATHs management
 # you need to set this up if using private repositories,
