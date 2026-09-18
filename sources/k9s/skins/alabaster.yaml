@@ -1,0 +1,102 @@
+# Alabaster for k9s - the same palette as alacritty/themes/alabaster.toml,
+# .vimrc (colorscheme alabaster, background=light) and tmux.conf.
+# Original theme by tonsky.
+#
+# Backgrounds are the literal `default`, the same trick upstream's
+# transparent.yaml uses: k9s hands tcell ColorDefault and the terminal's own
+# background shows through. So this tracks alacritty rather than restating it -
+# change the alacritty theme and k9s follows, and window opacity keeps working.
+# Only the foregrounds and accents are named, and those come from the palette:
+#
+#   fg   #434343    faint  #BBBBBB    grey   #777777
+#   red  #AA3731    green  #448C27    yellow #CB9000
+#   blue #325CC0    purple #7A3E9D    cyan   #0083B2
+k9s:
+  body:
+    fgColor: "#434343"
+    bgColor: default
+    logoColor: "#325CC0"
+
+  prompt:
+    fgColor: "#434343"
+    bgColor: default
+    suggestColor: "#777777"
+
+  info:
+    fgColor: "#0083B2"      # the labels: Context, Cluster, User...
+    sectionColor: "#434343" # their values
+
+  dialog:
+    fgColor: "#434343"
+    bgColor: default
+    buttonFgColor: "#F7F7F7"
+    buttonBgColor: "#325CC0"
+    buttonFocusFgColor: "#FFFFFF"
+    buttonFocusBgColor: "#AA3731"   # red - the focused button usually deletes something
+    labelFgColor: "#CB9000"
+    fieldFgColor: "#434343"
+
+  frame:
+    border:
+      fgColor: "#BBBBBB"    # faint, so the grid recedes instead of boxing everything in
+      focusColor: "#325CC0"
+    menu:
+      fgColor: "#434343"
+      keyColor: "#325CC0"
+      numKeyColor: "#AA3731"
+    crumbs:
+      fgColor: "#F7F7F7"
+      bgColor: "#777777"    # deliberately NOT default - breadcrumbs need to read as a bar
+      activeColor: "#448C27"
+    status:
+      newColor: "#0083B2"
+      modifyColor: "#325CC0"
+      addColor: "#448C27"
+      pendingColor: "#CB9000"
+      errorColor: "#AA3731"
+      highlightColor: "#7A3E9D"
+      killColor: "#777777"
+      completedColor: "#777777"
+    title:
+      fgColor: "#434343"
+      bgColor: default
+      highlightColor: "#AA3731"
+      counterColor: "#325CC0"
+      filterColor: "#448C27"
+
+  views:
+    charts:
+      bgColor: default
+      defaultDialColors: ["#448C27", "#AA3731"]
+      defaultChartColors: ["#448C27", "#AA3731"]
+      resourceColors:
+        cpu: ["#325CC0", "#0083B2"]
+        mem: ["#7A3E9D", "#E64CE6"]
+    table:
+      fgColor: "#434343"
+      bgColor: default
+      cursorFgColor: "#F7F7F7"
+      cursorBgColor: "#325CC0"   # explicit: the selected row is the one thing that must pop
+      markColor: "#CB9000"
+      header:
+        fgColor: "#325CC0"
+        bgColor: default
+        sorterColor: "#AA3731"
+    xray:
+      fgColor: "#434343"
+      bgColor: default
+      cursorColor: "#BBBBBB"
+      cursorTextColor: "#000000"
+      graphicColor: "#7A3E9D"
+    yaml:
+      keyColor: "#325CC0"
+      colonColor: "#777777"
+      valueColor: "#434343"
+    logs:
+      fgColor: "#434343"
+      bgColor: default
+      indicator:
+        fgColor: "#F7F7F7"
+        bgColor: "#325CC0"
+        toggleOnColor: "#448C27"
+        toggleOffColor: "#777777"
