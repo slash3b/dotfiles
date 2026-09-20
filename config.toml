@@ -235,6 +235,14 @@ dest = "~/.config/btop/themes/adwaita.theme"
 mode = "copy"
 
 [[dotfiles.file]]
+src = "k9s/config.yaml"
+dest = "~/.config/k9s/config.yaml"
+
+[[dotfiles.file]]
+src = "k9s/skins/alabaster.yaml"
+dest = "~/.config/k9s/skins/alabaster.yaml"
+
+[[dotfiles.file]]
 src = "redshift.conf"
 dest = "~/.config/redshift.conf"
 mode = "copy"
