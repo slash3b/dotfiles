@@ -121,7 +121,10 @@ packages = [
     "graphviz",
 
     # kubernetes & co
-    "docker.io"
+    "docker.io",
+
+    # automount
+    "udiskie"
 ]
 
 # Packages with post-install hooks or special handling
