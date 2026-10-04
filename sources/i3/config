@@ -214,6 +214,9 @@ exec --no-startup-id redshift-gtk
 # syncthing applet
 exec --no-startup-id syncthing-gtk
 
+# automount; tray icon only shown while a removable device is present
+exec --no-startup-id udiskie --smart-tray
+
 # run screensaver daemon
 exec --no-startup-id xscreensaver -no-splash
 
