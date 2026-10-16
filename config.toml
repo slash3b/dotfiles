@@ -306,3 +306,8 @@ run = "curl -LO https://github.com/kubernetes/minikube/releases/latest/download/
 [[scripts]]
 bin = "obsidian"
 run = "curl -L https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.AppImage -o /tmp/Obsidian-1.12.7.AppImage && chmod +x /tmp/Obsidian-1.12.7.AppImage && sudo mv /tmp/Obsidian-1.12.7.AppImage /usr/local/bin/obsidian"
+
+
+[[scripts]]
+bin = "rustup"
+run = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
