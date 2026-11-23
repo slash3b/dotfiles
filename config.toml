@@ -311,3 +311,7 @@ run = "curl -L https://github.com/obsidianmd/obsidian-releases/releases/download
 [[scripts]]
 bin = "rustup"
 run = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+
+[[scripts]]
+bin = "jless"
+run = "curl -fL https://github.com/PaulJuliusMartinez/jless/releases/download/v0.9.0/jless-v0.9.0-x86_64-unknown-linux-gnu.zip -o /tmp/jless.zip && unzip -o /tmp/jless.zip jless -d /tmp && chmod +x /tmp/jless && mv -f /tmp/jless ~/.local/bin/jless && rm /tmp/jless.zip"

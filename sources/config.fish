@@ -60,6 +60,7 @@ set -x BROWSER xdg-open
 set -Ua fish_user_paths "$HOME/go/bin"
 set -Ua fish_user_paths "$HOME/go-pkgs/bin"
 set -Ua fish_user_paths "$HOME/.local/bin"
+set -Ua fish_user_paths "$HOME/.cargo/bin"
 
 # direnv 
 # trigger direnv at prompt, and on every arrow-based directory change (default)
