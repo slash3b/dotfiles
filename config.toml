@@ -171,6 +171,14 @@ src = "alacritty/themes/alabaster.toml"
 dest = "~/.config/alacritty/themes/alabaster.toml"
 
 [[dotfiles.file]]
+src = "ghostty/config.ghostty"
+dest = "~/.config/ghostty/config.ghostty"
+
+[[dotfiles.file]]
+src = "ghostty/themes/alabaster"
+dest = "~/.config/ghostty/themes/alabaster"
+
+[[dotfiles.file]]
 src = "tmux/tmux.conf"
 dest = "~/.config/tmux/tmux.conf"
 
@@ -315,3 +323,9 @@ run = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
 [[scripts]]
 bin = "jless"
 run = "curl -fL https://github.com/PaulJuliusMartinez/jless/releases/download/v0.9.0/jless-v0.9.0-x86_64-unknown-linux-gnu.zip -o /tmp/jless.zip && unzip -o /tmp/jless.zip jless -d /tmp && chmod +x /tmp/jless && mv -f /tmp/jless ~/.local/bin/jless && rm /tmp/jless.zip"
+
+# Ghostty is not in the Debian archive; this installs the community .deb for trixie/forky
+# (https://github.com/mkasberg/ghostty-ubuntu). Re-run it to update.
+[[scripts]]
+bin = "ghostty"
+run = '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"'

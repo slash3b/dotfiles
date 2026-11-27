@@ -1,0 +1,22 @@
+# Ghostty config, ported from alacritty/alacritty.toml.
+
+font-family = Fira Code
+font-size = 11
+
+# Alacritty does not render ligatures; turn them off to match.
+font-feature = -calt, -liga, -dlig
+
+# Same palette as alacritty/themes/alabaster.toml, loaded from themes/alabaster.
+# Ghostty's bundled "Alabaster" theme uses different colors, so we ship our own.
+theme = alabaster
+
+# Alacritty: draw_bold_text_with_bright_colors = true
+bold-color = bright
+
+# Alacritty: padding 0 with dynamic_padding = true
+window-padding-x = 0
+window-padding-y = 0
+window-padding-balance = true
+
+# Let i3 draw the title bar, as it does for Alacritty, instead of a GTK header bar.
+gtk-titlebar = false
